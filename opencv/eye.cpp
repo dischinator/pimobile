@@ -65,7 +65,7 @@ std::vector<pmv::Match*> pmv::Eye::look() {
     #ifdef DEBUG
     perform("frame capture");
     #endif
-    cv::imwrite("/usr/share/nginx/html/scene.jpg", sceneImageMat);
+    cv::imwrite("../frontend/camera/scene.jpg", sceneImageMat);
 
     surfDetector.detect(sceneImageMat, sceneKeypoints);
     surfExtractor.compute(sceneImageMat, sceneKeypoints, sceneDescriptors);
@@ -194,7 +194,7 @@ std::vector<pmv::Match*> pmv::Eye::look() {
         }
 
         char outputFilename[255];
-        sprintf(outputFilename, "/usr/share/nginx/html/output_%d.jpg", objectId);
+        sprintf(outputFilename, "../frontend/camera/output_%d.jpg", objectId);
         cv::imwrite(outputFilename, imageMatches);
         
         #ifdef DEBUG
@@ -203,7 +203,7 @@ std::vector<pmv::Match*> pmv::Eye::look() {
     }
     
     // write image showing all found objects
-    cv::imwrite("/usr/share/nginx/html/output.jpg", sceneImageMat);
+    cv::imwrite("../frontend/camera/output.jpg", sceneImageMat);
     
     #ifdef DEBUG
     perform("frame finished");
