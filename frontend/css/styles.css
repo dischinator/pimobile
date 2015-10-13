@@ -1,0 +1,136 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: black;
+    font-size: 12px;
+}
+
+.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+img {
+    display: block;
+}
+
+#controller {
+    position: relative;
+    float: left;
+    height: 60%;
+    /*height: calc(55% - 4px);*/
+    width: 100%;
+}
+
+#controller > button {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+}
+
+#cam {
+    float: left;
+    width: 100%;
+    height: 40%;
+    background: url("http://192.168.2.210:8080/?action=stream") no-repeat center;
+    background-size: contain;
+    position: relative;
+    overflow: hidden;
+}
+
+#cam, #controller {
+    transition: all 0.7s ease;
+}
+
+#cam.noCamera {
+    height: 0%;
+}
+
+#compassRose {
+    background: url("/images/compassrose2.png");
+    width: 540px;
+    height: 540px;
+    transition: all 0.3s ease;
+    position: absolute;
+    bottom: -470px;
+    left: -90px;
+}
+
+#compassRose.noTransition {
+    transition: all 0s;
+}
+
+#compassDigital,
+#distanceDigital {
+    position: absolute;
+    left: 50%;
+    color: wheat;
+    text-shadow: 0 0 5px black;
+}
+
+#compassDigital {
+    bottom: 0;
+}
+
+#distanceDigital {
+    top: 0;
+}
+
+#distanceVisual {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 1%;
+    border-radius: 3px;
+    box-shadow: 4px;
+    background-color: wheat;
+    transition: all 0.2s;
+}
+
+#controller.noCamera {
+    height: 100%;
+}
+
+
+.quarter {
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    border: 1px dotted darkorange;
+    float: left;
+    height: 50%;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+#slider {
+    position: absolute;
+    height: 6rem;
+    width: 6rem;
+    top: calc(50% - 3rem);
+    left: calc(50% - 3rem);
+    background-color: red;
+    border: 1px solid darkorange;
+    border-radius: 5rem;
+    box-shadow: 0 0 2rem 1px rgba(255,153,0,0.75);
+}
+
+#lightSwitch {
+    position: absolute;
+    right: 10px;
+    top: 30px;
+    cursor: pointer;
+}
+
+.moveTransition {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}

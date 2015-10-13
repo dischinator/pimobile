@@ -14,19 +14,42 @@
 *.la
 *.lo
 
-# Shared objects (inc. Windows DLLs)
-*.dll
+# Shared objects
 *.so
 *.so.*
 *.dylib
 
 # Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+# compass
+compass-api-test
+compass-cgi
+compass-test
+
+# control
+turn-speed
+turn
+square
+position
+pimobile-test
+pimobile-cgi
+
+# ultra
+ultra-test
+ultra-cgi
+ultra-api-test
+
+# tone
+alarm
+beep
+melody
+mute
+tetris
+
+# opencv
+opencv/*.png
+opencv/*.jpg
+vision
+findobject
 
 # Debug files
 *.dSYM/
