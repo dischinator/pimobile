@@ -19,6 +19,8 @@
 *.so.*
 *.dylib
 
+frontend/camera/*
+
 # Executables
 # compass
 compass-api-test
